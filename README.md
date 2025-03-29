@@ -1,91 +1,83 @@
-# Entendendo projeto em NextJS
+# Projeto de Cards de Notícias
 
-Este projeto foi desenvolvido utilizando Next.js, um framework React utilizado para a criação de aplicações web. Em seguida, encontrará uma explicação da estrutura de diretórios e arquivos do projeto.
+Este projeto consiste em um layout simples de cards de notícias, utilizando Next.js com CSS Modules para estilização. O design inclui uma lista de cards organizados verticalmente, cada um contendo uma data, um título, um preview da notícia e tags interativas.
 
-## 1. Criando um projeto NextJS
+## Tecnologias Utilizadas
 
-![alt text](imagens/image.png)
+- **Next.js** - Framework para React com suporte a renderização no servidor
+- **CSS Modules** - Modularização de estilos para um melhor encapsulamento
+- **React** - Biblioteca para construção de interfaces de usuário
 
-Caso não possua um projeto NextJS, você precisará ter o Node.js instalado em sua máquina, e deverá executar o seguinte comando em seu Terminal:
+## Estrutura do Projeto
+
+O projeto é composto pelos seguintes arquivos principais:
 
 ```
-npx create-next-app@latest
-````
+/
+├── page.js          # Componente principal da página
+├── page.module.css  # Estilização dos componentes
+├── globals.css      # Estilos globais do projeto
+```
 
-Após feito, você deverá:
+## Instalação e Execução
 
-1. Adicionar em seu projeto as pastas /aida, /alexa, e /foguete
+Para rodar o projeto localmente, siga os passos abaixo:
 
-2. Criar um arquivo "page.js" em cada uma delas
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   cd nome-do-repositorio
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
 
-3. Criar seus respectivos CSS em módulo ".module.css"
+O projeto estará disponível em `http://localhost:3000/`.
 
-## 2. Codificando o projeto
+## Funcionalidades
 
-### Página inicial:
+- Exibição de cards de notícias com informações de data, título, descrição e tags.
+- Hover com animação para destacar os cards.
+- Tags interativas com efeito de hover.
 
-![alt text](imagens/image2.png)
+## Estilos
 
-No arquivo src/app/pages.js,  proveniente da criação do nosso projeto NextJS você precisará:
+O projeto utiliza CSS Modules para estilização, garantindo encapsulamento e prevenindo conflitos de classes.
 
-Realizar a importação dos estilos de page.module.css para aplicar estilo ao layout da página.
+### Exemplo de Estilo (`page.module.css`)
+```css
+.card {
+  width: 800px;
+  height: 200px;
+  border-radius: 30px;
+  border: solid 1px rgb(63, 63, 69);
+  background-color: rgb(26, 27, 34);
+  padding: 30px;
+  transition: 0.2s;
+  margin-top: -25pt;
+}
 
-O componente Link do Next.js será importado para permitir a navegação entre diferentes páginas da aplicação utilizando SPA (Single Page Application).
+.card:hover {
+  transform: translateY(-20px);
+}
+```
 
-As divs "align" e "alignall" foram utilizadas para alinhar ao centro da página e utilizar espaçamento para o conteúdo principal.
+## Contribuição
 
-Os cards de notícias apresentam um componente Link que direciona o usuário para uma página específica ao serem clicados.
+Se você deseja contribuir para este projeto, siga os passos:
 
-A seguinte estrutura será utilizada em nossos cards:
+1. Faça um fork do repositório.
+2. Crie uma branch para sua funcionalidade (`git checkout -b minha-funcionalidade`).
+3. Commit suas alterações (`git commit -m 'Adicionando nova funcionalidade'`).
+4. Envie para o repositório remoto (`git push origin minha-funcionalidade`).
+5. Abra um Pull Request.
 
-Uma div composta pela tag <time> que indica a data e uma classificação do card como sendo uma "Notícia", utilizando um texto com formatação padrão sem ser envolvido por tag.
+## Licença
 
-Um título (h1) que apresenta a notícia.
-
-Um preview (p) é uma descrição breve do conteúdo da notícia.
-
-Uma lista de tags (h1) que representa temas ou categorias relacionados à notícia.
-
-### Página Layout:
-
-![alt text](imagens/image3.png)
-
-Esta página contém nosso menu <header> e o título do website, que serão exibidos em todas as páginas da aplicação.
-
-O componente Link do Next.js também será importado para permitir a navegação entre diferentes páginas da aplicação utilizando SPA (Single Page Application).
-
-## 3. Utilizando CSS
-
-Para a aplicação dos estilos, serão criadas classes nos arquivos de páginas, para efetuar a aplicação. Assim como será feita a seleção de elementos padrão.
-
-### CSS Global:
-
-O CSS Global é utilizado quando você deseja aplicar estilos em toda a aplicação, sem restrições de escopo.
-
-![alt text](imagens/image4.png)
-
-No Next.js, o CSS global será importado no arquivo layout.js. Isso assegura que os estilos globais sejam carregados e aplicados em todas as páginas da aplicação.
-
-### CSS Modules:
-
-Os CSS Modules são utilizados para aplicar estilos locais, ou seja, os estilos são automaticamente encapsulados no componente de origem, o que evita que os estilos sejam transferidos para outros componentes.
-
-![alt text](imagens/image6.png)
-
-Para utilizar o CSS Modules, basta criar arquivos de estilo com a extensão.module.css. Estes arquivos podem ser importados diretamente para o componente em que deseja aplicá-los.
-
-### Diferença entre os CSS:
-
-O CSS Global afeta a aplicação inteira. Não é encapsulado, então poderá ocasionar conflitos de estilo. É utilizado para definir estilos que se aplicam globalmente.
-
-O CSS Modules encapsula os estilos, prevenindo conflitos entre os componentes. Cada classe ou ID que é criada em um arquivo.module.css é automaticamente "escopado" para o componente para o qual foi importada.
-
-![alt text](imagens/image5.png)
-
-Diferentemente da aplicação de um CSS comum, que são utilizadas aspas duplas envolvendo o nome de uma classe, a seleção é feita atráves de chaves e o prefixo "styles." será inserido na frente dos nomes das classes.
-
-
-
-
-
+Este projeto está sob a licença MIT. Você é livre para usá-lo e modificá-lo conforme necessário.
 
