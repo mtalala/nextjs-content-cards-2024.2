@@ -1,79 +1,61 @@
-.align {
+.container {
   display: flex;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  padding: 80pt;
 }
 
-.alignall {
-  margin-top:120pt;
-}
-
-.noticia {
+.card {
   flex-shrink: 0;
-  width: 80%;
-  height: 350px;
+  width: 800px;
+  height: 200px;
   border-radius: 30px;
-  box-shadow: 0 0 50px 0 rgb(68, 68, 68, 1);
+  border: solid 1px rgb(63, 63, 69);
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: rgb(26, 27, 34);
   padding: 30px;
-  font-size: 10px;
   transition: 0.2s;
   z-index: 1;
   overflow: hidden;
   position: relative;
   margin-right: 30pt;
-  margin-top: -45pt;
+  margin-top: -25pt;
+  color:#909297;
 }
 
-.noticia:hover {
+.card:hover {
   transform: translateY(-20px);
 }
 
-.noticia .tag {
-  font-size: 18px;
+.data {
   color: rgb(144, 144, 144);
   margin-left: 10pt;
 }
 
-.noticia h1 {
-  font-size: 38px;
-  line-height: 18px;
+.title {
   font-weight: bold;
-  margin-top: 40pt;
-  margin-bottom: 20pt;
-  margin-left: 10pt;
-  color: rgb(61, 68, 195);
+  color: rgb(79, 83, 170);
 }
 
-.noticia .tags h1 {
+.tag {
   display: inline-block;
-  border: solid 3px rgb(107, 107, 107);
+  border: solid 1px rgb(63, 63, 69);
   border-radius: 40px;
   padding: 8px 25px;
-  text-transform: uppercase;
   color: rgb(107, 107, 107);
   font-weight: bold;
   text-decoration: none;
-  margin-bottom: 3px;
-  margin-top: 10pt;
+  margin: 10pt 5px 3px 5px;
   transition: all ease-out 0.3s;
-  font-size: 16px;
 }
 
-.noticia .tags h1:hover {
+.tag:hover {
   border-color: rgb(135, 135, 135);
   color: #622aff;
 }
 
-.noticia .preview {
-  color: black;
-  margin-left: 40pt;
-  font-size: 22px;
-}
-
-.alignall a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.card .preview {
+  padding: 0 20px;
 }

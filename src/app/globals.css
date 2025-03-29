@@ -1,42 +1,5 @@
 html, body {
-  font-family: sans-serif;
-  background:rgb(250, 250, 250);
-}
-
-header {
-  width: 70%;
-  margin-left: 171px;
-  margin-right: 171px;
-  margin-top: 10pt;
-}
-
-ol {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  margin-top: 6px;
-  margin-bottom: 6px;
-  font-size: 16px;
-  color: #1f2937;
-}
-
-a {
-  text-decoration: none;
-  color: #1f2937;
-}
-
-a:hover {
-  color: black;
-}
-
-.titulo {
-  text-align: center;
-  font-size: 50px;
-  font-weight: 500;
-}
-
-hr {
-  width: 85%;
-  margin: 30pt auto;
+  font-family: Helvetica;
+  background:rgb(20, 21, 26);
+  font-size: 12px;
 }
