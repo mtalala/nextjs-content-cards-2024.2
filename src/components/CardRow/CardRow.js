@@ -5,35 +5,35 @@ import { useRouter } from "next/navigation";
 
 const cards = [
   {
-    date: "March 03, 2025",
+    date: "October 21, 2024",
     title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     author: "Frank Doe",
     tags: ["Tag 1", "Tag 2", "Tag 3", "Tag 4"],
     link: "/"
   },
   {
-    date: "March 02, 2025",
+    date: "October 22, 2024",
     title: "Phasellus nibh tellus, vehicula non condimentum ut",
     author: "John Doe",
     tags: ["Tag A", "Tag B", "Tag C", "Tag D"],
     link: "/"
   },
   {
-    date: "March 01, 2025",
+    date: "October 23, 2024",
     title: "Nullam mattis faucibus lectus, in volutpat",
     author: "Jane Doe",
     tags: ["Tag X", "Tag Y", "Tag Z", "Tag W"],
     link: "/"
   },
   {
-    date: "February 28, 2025",
+    date: "October 24, 2024",
     title: "Aenean in odio non mi blandit vulputate",
     author: "Alice Doe",
     tags: ["Tag I", "Tag II", "Tag III", "Tag IV"],
     link: "/"
   },
   {
-    date: "February 27, 2025",
+    date: "October 25, 2024",
     title: "Maecenas tincidunt placerat ante",
     author: "Michael Doe",
     tags: ["Tag C", "Tag D", "Tag E", "Tag F"],
@@ -90,7 +90,9 @@ const CardRow = () => {
       <div className={styles.row} ref={rowRef}>
         {cards.map((card, index) => (
           <div key={index} className={styles.card} onClick={() => router.push(card.link)}>
-            <div className={styles.data}>Archives&nbsp;&nbsp;<time>{card.date}</time></div>
+            <div className={styles.data}>
+                    <time>{card.date}</time> - Archives
+            </div>
             <p className={styles.title}>{card.title}</p>
             <div className={styles.author}>
               <h1 className={styles.info}>{card.author}</h1>

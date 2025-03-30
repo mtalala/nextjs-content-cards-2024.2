@@ -68,8 +68,6 @@
 
   .card .data {
     color: rgb(144, 144, 144);
-    font-weight: bold;
-    text-transform: uppercase;
   }
   
   .card .title {
