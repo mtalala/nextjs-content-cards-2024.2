@@ -8,8 +8,7 @@ export default function Home() {
         <div className={styles.card}>
 
           <div className={styles.data}>
-            <time>21.10.2024</time> 
-            - Notícia
+            <time>21.10.2024</time> - Card
           </div>
 
           <h1 className={styles.title}>Title</h1>
@@ -30,8 +29,7 @@ export default function Home() {
         <div className={styles.card}>
 
           <div className={styles.data}>
-            <time>21.10.2024</time> 
-            - Notícia
+            <time>21.10.2024</time> - Card
           </div>
 
           <h1 className={styles.title}>Title</h1>
@@ -52,8 +50,7 @@ export default function Home() {
         <div className={styles.card}>
 
           <div className={styles.data}>
-            <time>21.10.2024</time> 
-            - Notícia
+            <time>21.10.2024</time> - Card
           </div>
 
           <h1 className={styles.title}>Title</h1>

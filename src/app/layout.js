@@ -2,8 +2,8 @@ import "./globals.css";
 import Link from 'next/link';
 
 export const metadata = {
-  title: "React",
-  description: "Trabalhando com páginas React",
+  title: "Next.js",
+  description: "Just a simple Next.js project.",
 };
 
 export default function RootLayout({ children }) {
