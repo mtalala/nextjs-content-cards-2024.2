@@ -1,12 +1,12 @@
 # Projeto de Cards de Notícias
 
-Este projeto consiste em um layout simples de cards de notícias, utilizando Next.js com CSS Modules para estilização. O design inclui uma lista de cards organizados verticalmente, cada um contendo uma data, um título, um preview da notícia e tags interativas.
+Este projeto consiste em um layout simples de cards de notícias, utilizando Next.js com CSS Modules para estilização. O design inclui uma lista vertical e horizontal de cards, cada um contendo uma data, um título, um preview da notícia e tags interativas.
 
 ## Tecnologias Utilizadas
 
-- **Next.js** - Framework para React com suporte a renderização no servidor
-- **CSS Modules** - Modularização de estilos para um melhor encapsulamento
-- **React** - Biblioteca para construção de interfaces de usuário
+- **Next.js** - Framework para React com suporte a renderização no servidor  
+- **CSS Modules** - Modularização de estilos para um melhor encapsulamento  
+- **React** - Biblioteca para construção de interfaces de usuário  
 
 ## Estrutura do Projeto
 
@@ -14,9 +14,18 @@ O projeto é composto pelos seguintes arquivos principais:
 
 ```
 /
-├── page.js          # Componente principal da página
-├── page.module.css  # Estilização dos componentes
-├── globals.css      # Estilos globais do projeto
+├── src/
+│   ├── app/
+│   │   ├── page.js           # Componente principal da página
+│   │   ├── page.module.css   # Estilização dos componentes da página principal
+│   │   ├── globals.css       # Estilos globais do projeto
+│   ├── components/
+│   │   ├── CardColumn/
+│   │   │   ├── CardColumn.js       # Lista vertical de cards de notícias
+│   │   │   ├── CardColumn.module.css # Estilos para CardColumn
+│   │   ├── CardRow/
+│   │   │   ├── CardRow.js          # Cards de notícias com rolagem horizontal
+│   │   │   ├── CardRow.module.css  # Estilos para CardRow
 ```
 
 ## Instalação e Execução
@@ -41,15 +50,16 @@ O projeto estará disponível em `http://localhost:3000/`.
 
 ## Funcionalidades
 
-- Exibição de cards de notícias com informações de data, título, descrição e tags.
-- Hover com animação para destacar os cards.
-- Tags interativas com efeito de hover.
+- Exibição de cards de notícias com informações de data, título, descrição e tags.  
+- Layouts vertical e horizontal utilizando `CardColumn` e `CardRow`.  
+- Animação de hover para destacar os cards.  
+- Tags interativas com efeito de hover.  
 
 ## Estilos
 
 O projeto utiliza CSS Modules para estilização, garantindo encapsulamento e prevenindo conflitos de classes.
 
-### Exemplo de Estilo (`page.module.css`)
+### Exemplo de Estilo (`CardColumn.module.css`)
 ```css
 .card {
   width: 800px;
@@ -71,13 +81,12 @@ O projeto utiliza CSS Modules para estilização, garantindo encapsulamento e pr
 
 Se você deseja contribuir para este projeto, siga os passos:
 
-1. Faça um fork do repositório.
-2. Crie uma branch para sua funcionalidade (`git checkout -b minha-funcionalidade`).
-3. Commit suas alterações (`git commit -m 'Adicionando nova funcionalidade'`).
-4. Envie para o repositório remoto (`git push origin minha-funcionalidade`).
-5. Abra um Pull Request.
+1. Faça um fork do repositório.  
+2. Crie uma branch para sua funcionalidade (`git checkout -b minha-funcionalidade`).  
+3. Commit suas alterações (`git commit -m 'Adicionando nova funcionalidade'`).  
+4. Envie para o repositório remoto (`git push origin minha-funcionalidade`).  
+5. Abra um Pull Request.  
 
 ## Licença
 
 Este projeto está sob a licença MIT. Você é livre para usá-lo e modificá-lo conforme necessário.
-
