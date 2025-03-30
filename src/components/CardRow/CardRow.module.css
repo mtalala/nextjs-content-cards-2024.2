@@ -1,0 +1,112 @@
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .row {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 60pt 20pt;
+  }
+  
+  .row::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .card {
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    border: solid 1px rgb(63, 63, 69);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(26, 27, 34);
+    padding: 30px;
+    font-size: 12px;
+    transition: 0.2s;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    margin-right: -30pt;
+  }
+  
+  .card:hover {
+    transform: translateY(-20px);
+  }
+  
+  .arrow {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 40%;
+  }
+  
+  .leftArrow {
+    left: 5px;
+  }
+  
+  .rightArrow {
+    right: 5px;
+  }
+
+  .card .data {
+    color: rgb(144, 144, 144);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .card .title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5pt;
+    color: rgb(79, 83, 170);
+    text-transform: uppercase;
+  }
+  
+  .card .author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20pt;
+  }
+  
+  .card .author .info {
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(144, 144, 144);
+  }
+  
+  .card .tags .tag {
+    display: inline-block;
+    border: solid 1px rgb(63, 63, 69);
+    border-radius: 30px;
+    padding: 8px 25px;
+    color: rgb(107, 107, 107);
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 3px;
+    margin-bottom: 3px;
+    transition: all ease-out 0.3s;
+    font-size: 12px;
+  }
+  
+  .card .tags .tag:hover {
+    border-color: rgb(135, 135, 135);
+    color: #622aff;
+  }

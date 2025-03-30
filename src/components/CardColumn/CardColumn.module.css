@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 80pt;
+  }
+  
+  .card {
+    flex-shrink: 0;
+    width: 800px;
+    height: 200px;
+    border-radius: 30px;
+    border: solid 1px rgb(63, 63, 69);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(26, 27, 34);
+    padding: 30px;
+    transition: 0.2s;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    margin-top: -25pt;
+    color:#909297;
+  }
+  
+  .card:hover {
+    transform: translateY(-20px);
+  }
+  
+  .data {
+    color: rgb(144, 144, 144);
+    margin-left: 10pt;
+  }
+  
+  .title {
+    font-weight: bold;
+    color: rgb(79, 83, 170);
+  }
+  
+  .tag {
+    display: inline-block;
+    border: solid 1px rgb(63, 63, 69);
+    border-radius: 40px;
+    padding: 8px 25px;
+    color: rgb(107, 107, 107);
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10pt 5px 3px 5px;
+    transition: all ease-out 0.3s;
+  }
+  
+  .tag:hover {
+    border-color: rgb(135, 135, 135);
+    color: #622aff;
+  }
+  
+  .card .preview {
+    padding: 0 20px;
+  }
