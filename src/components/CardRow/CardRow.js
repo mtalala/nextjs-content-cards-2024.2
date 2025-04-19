@@ -78,14 +78,13 @@ const CardRow = () => {
   return (
     <div className={styles.container}>
       {showLeftArrow && (
-        <button 
-          style={{
-            backgroundImage: "url('/leftarrow.png')",
-            backgroundColor: "transparent"
-          }}
-          className={`${styles.arrow} ${styles.leftArrow}`}
-          onClick={() => scroll("left")}
-        />
+        <button
+        className={`${styles.button} ${styles.leftArrow}`}
+        onClick={() => scroll("left")}
+      >
+        <img src='/leftarrow.png' className={styles.arrow}/>
+      </button>
+
       )}
       <div className={styles.row} ref={rowRef}>
         {cards.map((card, index) => (
@@ -106,14 +105,12 @@ const CardRow = () => {
         ))}
       </div>
       {showRightArrow && (
-        <button 
-          style={{
-            backgroundImage: "url('/rightarrow.png')",
-            backgroundColor: "transparent"
-          }}
-          className={`${styles.arrow} ${styles.rightArrow}`}
-          onClick={() => scroll("right")}
-        />
+        <button
+            className={`${styles.button} ${styles.rightArrow}`}
+            onClick={() => scroll("right")}
+          >
+            <img src='/rightarrow.png' className={styles.arrow}/>
+          </button>
       )}
     </div>
   );
